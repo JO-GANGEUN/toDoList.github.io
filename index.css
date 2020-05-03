@@ -28,8 +28,12 @@ h1 {
 
 .btn {
   cursor: pointer;
+  
 }
-
+button{
+  background-color: transparent;
+  border: none;
+}
 .form,
 .greeting {
   display: none;
@@ -71,9 +75,23 @@ ul li::before {
 }
 
 .temp-min {
-  color: blue;
+  color: #4E8098;
 }
 
 .temp-max {
-  color: red;
+  color: #A8201A;
+}
+
+.question {
+  background-color: #f66fbd;
+  border: none; /*枠線非表示*/
+  border-radius: 0.3rem;
+  outline: none; /*フォーカス時の枠線非表示*/
+  height: 30px;
+  padding-left: 10px;
+}
+
+.question::placeholder {
+  color: grey;
+  padding-left: 10px;
 }
