@@ -18,13 +18,19 @@
 			<input type="text" placeholder="what is your name">
 		</form>
 		<h4 class="js-greetings greetings"></h4>
-		<form class="js-toDoForm">
-			<input type="text" placeholder="Write a to do">
-		</form>
-		<ui class="js-toDoList">
 
-		</ui>
+		<form id="toDoForm">
+			<input type="text" id="toDoInput" placeholder="Add Task" />
+		  </form>
+		  <h2>Pending</h2>
+		  <ul class="list-style" id="toDoList"></ul>
+	  
+		  <h2>Finished</h2>
+		  <ul class="list-style" id="finishedList"></ul>
+
 		<span class="js-weather"></span>
+		<span class="temp-max"></span>
+		<span class="temp-min"></span>
 
 	</div>
 	<script src="index.js">

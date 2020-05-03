@@ -1,4 +1,7 @@
 const weather = document.querySelector(".js-weather");
+const tempMin = document.querySelector(".temp-min");
+const tempMax = document.querySelector(".temp-max");
+
 const COORDS = 'coords';
 const API_KEY = "57078e5b759f8509bd7d48778de8911f";
 
@@ -10,8 +13,13 @@ function getWeather(lat, lon) {
         .then(function (myJson) {
         
             const temperature = myJson.main.temp;
+            const temperature_min = myJson.main.temp_min;
+            const temperature_max = myJson.main.temp_max;
             const place = myJson.name;
-            weather.innerText = `${temperature} @ ${place}`;
+            weather.innerText = `${temperature}° @ ${place}`;
+            tempMin.innerText = "↓"+temperature_min+"°";
+            tempMax.innerText = "↑"+temperature_max+"°";
+
         });
 
 
